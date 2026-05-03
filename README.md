@@ -12,6 +12,14 @@ Balatro esintili, **mouse-only** oynanan, stratejik tempo ve midcore-casual zorl
 ## Çalıştırma
 Bu MVP saf HTML/CSS/JS ile yazılmıştır.
 
+Tek komutla:
+
+```bash
+./run.sh
+```
+
+Alternatif olarak:
+
 ```bash
 python3 -m http.server 8000
 ```

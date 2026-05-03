@@ -28,6 +28,7 @@ const el = {
   reels: document.getElementById('reels'),
   log: document.getElementById('log'),
   spinBtn: document.getElementById('spin-btn'),
+  leverBtn: document.getElementById('lever-btn'),
   shopBtn: document.getElementById('shop-btn'),
   nextBtn: document.getElementById('next-btn'),
   shop: document.getElementById('shop'),
@@ -132,6 +133,14 @@ function nextRound() {
   updateUI();
 }
 
+function triggerSpinFromControl() {
+  el.leverBtn.classList.add('pulled');
+  spin();
+  setTimeout(() => el.leverBtn.classList.remove('pulled'), 200);
+}
+
+el.spinBtn.addEventListener('click', triggerSpinFromControl);
+el.leverBtn.addEventListener('click', triggerSpinFromControl);
 el.spinBtn.addEventListener('click', spin);
 el.shopBtn.addEventListener('click', openShop);
 el.closeShop.addEventListener('click', () => el.shop.classList.add('hidden'));

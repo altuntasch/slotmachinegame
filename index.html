@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon Slots: Run v0.1</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar panel">
+      <h1>Neon Slots: Run <span>v0.1 MVP</span></h1>
+      <div class="meta">
+        <div>Round: <strong id="round">1</strong></div>
+        <div>Spin: <strong id="spins">0</strong>/<span id="spin-limit">5</span></div>
+        <div>Credits: <strong id="credits">50</strong></div>
+      </div>
+    </header>
+
+    <section class="goal panel">
+      <div>Hedef Skor</div>
+      <strong id="goal">120</strong>
+      <div>Mevcut Skor</div>
+      <strong id="score">0</strong>
+    </section>
+
+    <section class="reels panel" id="reels"></section>
+
+    <section class="actions panel">
+      <button id="spin-btn">Spin (5 kredi)</button>
+      <button id="shop-btn">Mağaza</button>
+      <button id="next-btn" disabled>Sonraki Round</button>
+    </section>
+
+    <section class="shop panel hidden" id="shop">
+      <h2>Mağaza (Mouse ile seçim)</h2>
+      <div class="cards" id="shop-cards"></div>
+      <button id="close-shop">Kapat</button>
+    </section>
+
+    <section class="log panel" id="log"></section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>

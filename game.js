@@ -141,6 +141,7 @@ function triggerSpinFromControl() {
 
 el.spinBtn.addEventListener('click', triggerSpinFromControl);
 el.leverBtn.addEventListener('click', triggerSpinFromControl);
+el.spinBtn.addEventListener('click', spin);
 el.shopBtn.addEventListener('click', openShop);
 el.closeShop.addEventListener('click', () => el.shop.classList.add('hidden'));
 el.nextBtn.addEventListener('click', nextRound);
